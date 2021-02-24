@@ -14,3 +14,4 @@ IMPORTANT SCRIPT:
 => remove unused columns
 => handle missing values using MICE
 => data partitioning (if necessary for SEM)
+=> add target column for Class Variables using PVSCIE in step2.R script
