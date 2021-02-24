@@ -58,7 +58,7 @@ fourScale.to.num1 <- function(x){
 #' “strongly agree”, “agree”, “disagree”, and “strongly disagree”
 fourScale.to.num1
 
-#' [COOPERATE][CPSVALUE]
+#' [COOPERATE] & [CPSVALUE]
 #' 4-point Likert
 #' To what extent do you disagree or agree with the following statements about yourself?
 fourScale.to.num1
@@ -242,7 +242,7 @@ threeScale.to.num1 <- function(x){
 #' and for each Latent Variables
 #'----------------------------#
 #'1
-pisaQ[,`:=`(
+dataNew[,`:=`(
   #' 4. Science self-efficacy (SCIEEFF)
   ST129Q01TA = sapply(ST129Q01TA, fourScale.to.num7),
   ST129Q02TA = sapply(ST129Q02TA, fourScale.to.num7),
@@ -255,7 +255,7 @@ pisaQ[,`:=`(
   )]  
 
 # 2
-pisaQ[,`:=`(
+dataNew[,`:=`(
   #' Interest in broad science topics (INTBRSCI) 
   #' INTBRSCI 
   ST095Q04NA = sapply(ST095Q04NA,fiveScale.to.num1),
@@ -266,7 +266,7 @@ pisaQ[,`:=`(
   )]  
 
 # 3
-pisaQ[,`:=`(
+dataNew[,`:=`(
   #' JOYSCIE
   #' Enjoyment of science (ST094) is a trend question from PISA 2006
   ST094Q01NA = sapply(ST094Q01NA,fourScale.to.num1),
@@ -277,7 +277,7 @@ pisaQ[,`:=`(
   )]
 
 # 4
-pisaQ[,`:=`(  
+dataNew[,`:=`(  
   #' Instrumental motivation (INSTSCIE)
   ST113Q01TA = sapply(ST113Q01TA, fourScale.to.num1a),
   ST113Q02TA = sapply(ST113Q02TA, fourScale.to.num1a),
@@ -286,7 +286,7 @@ pisaQ[,`:=`(
   )]  
 
 # 5
-pisaQ[,`:=`(
+dataNew[,`:=`(
   #' EPIST
   ST131Q01NA = sapply(ST131Q01NA, fourScale.to.num1),
   ST131Q03NA = sapply(ST131Q03NA, fourScale.to.num1),
@@ -297,7 +297,7 @@ pisaQ[,`:=`(
   )]  
 
 # 6
-pisaQ[,`:=`(
+dataNew[,`:=`(
   #' Environmental awareness (ENVAWARE)
   ST092Q01TA = sapply(ST092Q01TA, fourScale.to.num8),
   ST092Q02TA = sapply(ST092Q02TA, fourScale.to.num8),
@@ -319,7 +319,7 @@ pisaQ[,`:=`(
   )] 
 
 # 8
-pisaQ[,`:=`(
+dataNew[,`:=`(
   #' ANXTEST
   ST118Q01NA = sapply(ST118Q01NA, fourScale.to.num2),
   ST118Q02NA = sapply(ST118Q02NA, fourScale.to.num2),
@@ -329,7 +329,7 @@ pisaQ[,`:=`(
   )] 
 
 # 9
-pisaQ[,`:=`(
+dataNew[,`:=`(
   #' BELONG
   ST034Q01TA = sapply(ST034Q01TA, fourScale.to.num2),
   ST034Q02TA = sapply(ST034Q02TA, fourScale.to.num1),
@@ -340,7 +340,7 @@ pisaQ[,`:=`(
   )]
 
 # 10
-pisaQ[,`:=`(
+dataNew[,`:=`(
   #' MOTIVAT
   ST119Q01NA = sapply(ST119Q01NA, fourScale.to.num1),
   ST119Q02NA = sapply(ST119Q02NA, fourScale.to.num1),
@@ -350,7 +350,7 @@ pisaQ[,`:=`(
   )]  
 
 # 11
-pisaQ[,`:=`(
+dataNew[,`:=`(
   # COOPERATE
   ST082Q02NA = sapply(ST082Q02NA, fourScale.to.num1),
   ST082Q03NA = sapply(ST082Q03NA, fourScale.to.num1),
@@ -365,11 +365,6 @@ pisaQ[,`:=`(
   ST082Q14NA = sapply(ST082Q14NA, fourScale.to.num1)
   )]
   
-  
-
-
-
-
 #'   #'----------------------------#
 #' [Excluded] not being used in this study
 #' pisaQ[,`:=`(    
@@ -420,4 +415,3 @@ pisaQ[,`:=`(
 #'----------------------------#
 #' CULTPOSS,HEDRES,WEALTH,ICTRES,HOMEPOS,SCIEACT,
   
-
