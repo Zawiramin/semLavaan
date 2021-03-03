@@ -1,3 +1,4 @@
+# --- load-packages ----
 #-----------------------------------------------#
 #'             Required 
 #' #--------------------------------------------#
@@ -9,12 +10,14 @@ library("lavaan.survey")
 # FASTER THAN tidyverse and RECOMMENDED
 # fread(), fwrite()
 library("data.table") 
-library(dplyr) # %>% 
+library("dplyr") # %>% 
 library("pander") # adding nice title for table
 library(plyr) # arrange() function
+library(kableExtra) # table using kable
+library("expss") # table using expss
 
-# library("Rcpp")
-# library("mice")
+library("Rcpp")
+library("mice")
 
 # get the data
 # overall data
